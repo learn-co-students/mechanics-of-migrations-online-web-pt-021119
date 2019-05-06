@@ -9,7 +9,13 @@ require 'bundler/setup'
 Bundler.require
 
 
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/artists.sqlite"
+)
 # put the code to connect to the database here
 
 
 require_relative "../artist.rb"
+require_relative "../db/migrate/01_create_artists"
+require_relative "../db/migrate/02_add_favorite_food_to_artists.rb"

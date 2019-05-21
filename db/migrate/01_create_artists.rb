@@ -1,4 +1,4 @@
-class CreateArtists < ActiveRecord::Migration
+class CreateArtists < ActiveRecord::Migration[4.2]
   def up 
   end
   
@@ -11,11 +11,7 @@ class CreateArtists < ActiveRecord::Migration
     t.string :genre 
     t.integer :age 
     t.string :hometown
-    
-    
-    
     end
-    
   end
 end
   
